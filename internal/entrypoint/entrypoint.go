@@ -25,8 +25,12 @@ func Run(ctx context.Context, cfg *config.Config) error {
 
 	// Слой представления (ручки)
 	engine := httphandlers.New(svc).RegisterHandlers()
-	engine.GET("/metrics", gin.WrapH(gcmemstats.MetricsHandler()))
-	registerPprof(engine)
+	if cfg.Metrics {
+		engine.GET("/metrics", gin.WrapH(gcmemstats.MetricsHandler()))
+	}
+	if cfg.Pprof {
+		registerPprof(engine)
+	}
 
 	// Сервер
 	srv := server.New(":"+cfg.HTTPPort, engine)
