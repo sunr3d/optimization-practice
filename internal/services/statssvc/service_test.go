@@ -3,6 +3,7 @@ package statssvc
 import (
 	"context"
 	"math"
+	"math/rand/v2"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -161,7 +162,7 @@ func generateData(size int) []float64 {
 	data := make([]float64, size)
 
 	for i := 0; i < size; i++ {
-		data[i] = float64(i)
+		data[i] = rand.Float64()*200 - 100
 	}
 
 	return data
