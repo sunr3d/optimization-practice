@@ -42,15 +42,15 @@ fi
 echo "Сервер запущен с PID: $SERVER_PID"
 
 echo "Запуск CPU профилирования в фоне..."
-go tool pprof -proto -seconds=45 http://localhost:8080/debug/pprof/profile > optimization/profiles/cpu_server${SUFFIX}.prof &
+go tool pprof -proto -seconds=20 http://localhost:8080/debug/pprof/profile > optimization/profiles/cpu_server${SUFFIX}.prof &
 CPU_PID=$!
 
 echo "Запуск memory профилирования в фоне..."
-go tool pprof -proto -seconds=45 http://localhost:8080/debug/pprof/heap > optimization/profiles/mem_server${SUFFIX}.prof &
+go tool pprof -proto -seconds=20 http://localhost:8080/debug/pprof/heap > optimization/profiles/mem_server${SUFFIX}.prof &
 MEM_PID=$!
 
 echo "Запуск trace в фоне..."
-curl -o optimization/profiles/trace${SUFFIX}.out http://localhost:8080/debug/pprof/trace?seconds=45 &
+curl -o optimization/profiles/trace${SUFFIX}.out http://localhost:8080/debug/pprof/trace?seconds=20 &
 TRACE_PID=$!
 
 sleep 2
@@ -61,39 +61,33 @@ import json, os, random
 os.makedirs('optimization/data', exist_ok=True)
 def gen(n):
     return {"values":[random.random()*200-100 for _ in range(n)]}
-for n in (1000, 10000, 100000, 1000000):
+for n in (1000, 10000, 100000):
     with open(f'optimization/data/values_{n}.json','w') as f:
         json.dump(gen(n), f, separators=(',',':'))
-print("Random payloads generated: 1000, 10000, 100000, 1000000")
+print("Random payloads generated: 1000, 10000, 100000")
 PY
 
 echo "Запуск нагрузочного тестирования с hey..."
 
 # Тест 1: Маленький массив
 echo "Тестирование маленького набора данных (1000 элементов)..."
-hey -n 100000 -c 100 -m POST \
+hey -n 10000 -c 50 -m POST \
   -H "Content-Type: application/json" \
   -D optimization/data/values_1000.json \
   http://localhost:8080/stats | tee optimization/benchmarks/hey_small${SUFFIX}.txt
 
 # Тест 2: Средний массив
 echo "Тестирование среднего набора данных (10000 элементов)..."
-hey -n 10000 -c 50 -m POST \
+hey -n 1000 -c 25 -m POST \
   -H "Content-Type: application/json" \
   -D optimization/data/values_10000.json \
   http://localhost:8080/stats | tee optimization/benchmarks/hey_medium${SUFFIX}.txt
 
 # Тест 3: Большой массив
 echo "Тестирование большого набора данных (100000 элементов)..."
-hey -n 200 -c 10 -m POST -H "Content-Type: application/json" \
+hey -n 500 -c 10 -m POST -H "Content-Type: application/json" \
   -D optimization/data/values_100000.json \
   http://localhost:8080/stats | tee optimization/benchmarks/hey_large${SUFFIX}.txt
-
-# Тест 4: Очень большой массив
-echo "Тестирование очень большого набора данных (1000000 элементов)..."
-hey -n 20 -c 5 -m POST -H "Content-Type: application/json" \
-  -D optimization/data/values_1000000.json \
-  http://localhost:8080/stats | tee optimization/benchmarks/hey_xlarge${SUFFIX}.txt
 
 echo "Ожидание завершения профилирования..."
 wait $CPU_PID
