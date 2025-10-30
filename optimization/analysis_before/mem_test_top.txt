@@ -1,0 +1,14 @@
+File: statssvc.test
+Build ID: 7049d129a15222f2c0107a6afa300b2ec392c7f8
+Type: alloc_space
+Time: 2025-10-30 18:20:54 MSK
+Showing nodes accounting for 1046.70MB, 99.55% of 1051.42MB total
+Dropped 22 nodes (cum <= 5.26MB)
+      flat  flat%   sum%        cum   cum%
+ 1039.06MB 98.82% 98.82%  1039.06MB 98.82%  github.com/sunr3d/optimization-practice/internal/services/statssvc.(*service).Calculate
+    7.63MB  0.73% 99.55%     7.63MB  0.73%  github.com/sunr3d/optimization-practice/internal/services/statssvc.generateData
+         0     0% 99.55%     8.13MB  0.77%  github.com/sunr3d/optimization-practice/internal/services/statssvc.BenchmarkService_Calculate
+         0     0% 99.55%  1039.06MB 98.82%  github.com/sunr3d/optimization-practice/internal/services/statssvc.BenchmarkService_Calculate.func1
+         0     0% 99.55%  1039.06MB 98.82%  testing.(*B).launch
+         0     0% 99.55%     8.13MB  0.77%  testing.(*B).run1.func1
+         0     0% 99.55%  1047.20MB 99.60%  testing.(*B).runN
