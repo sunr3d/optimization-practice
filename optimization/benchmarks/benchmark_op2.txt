@@ -1,0 +1,12 @@
+goos: linux
+goarch: amd64
+pkg: github.com/sunr3d/optimization-practice/internal/services/statssvc
+cpu: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+BenchmarkService_Calculate/10_элементов-8                  	11781754	        92.20 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/100_элементов-8                 	 2440642	       418.7 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/1000_элементов-8                	  355197	      3429 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/10000_элементов-8               	   36436	     33032 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/100000_элементов-8              	    3624	    344300 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/1000000_элементов-8             	     307	   4072902 ns/op	      64 B/op	       1 allocs/op
+PASS
+ok  	github.com/sunr3d/optimization-practice/internal/services/statssvc	8.333s

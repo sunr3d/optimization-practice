@@ -1,0 +1,19 @@
+File: main
+Build ID: faadc123f0ee54ca037883c63fcc1f98bde25a40
+Type: cpu
+Time: 2025-10-30 19:58:47 MSK
+Duration: 20s, Total samples = 52.94s (264.69%)
+Showing nodes accounting for 31.26s, 59.05% of 52.94s total
+Dropped 410 nodes (cum <= 0.26s)
+Showing top 10 nodes out of 105
+      flat  flat%   sum%        cum   cum%
+     8.43s 15.92% 15.92%      8.47s 16.00%  strconv.readFloat
+     5.63s 10.63% 26.56%     10.66s 20.14%  encoding/json.(*Decoder).readValue
+     4.73s  8.93% 35.49%      5.80s 10.96%  slices.partitionOrdered[go.shape.float64]
+     3.46s  6.54% 42.03%      4.10s  7.74%  encoding/json.(*decodeState).rescanLiteral
+     1.87s  3.53% 45.56%      2.34s  4.42%  encoding/json.stateDot0
+     1.80s  3.40% 48.96%      3.08s  5.82%  reflect.(*rtype).Name
+     1.55s  2.93% 51.89%      7.38s 13.94%  encoding/json.indirect
+     1.51s  2.85% 54.74%     22.64s 42.77%  encoding/json.(*decodeState).literalStore
+     1.20s  2.27% 57.01%      1.26s  2.38%  cmp.Less[go.shape.float64] (inline)
+     1.08s  2.04% 59.05%      1.21s  2.29%  slices.insertionSortOrdered[go.shape.float64]

@@ -1,0 +1,18 @@
+File: main
+Build ID: faadc123f0ee54ca037883c63fcc1f98bde25a40
+Type: inuse_space
+Time: 2025-10-30 19:59:07 MSK
+Duration: 20.01s, Total samples = 10693.31kB 
+Showing nodes accounting for 9636.98kB, 90.12% of 10693.31kB total
+Showing top 10 nodes out of 60
+      flat  flat%   sum%        cum   cum%
+ 4172.42kB 39.02% 39.02%  4172.42kB 39.02%  encoding/json.(*Decoder).refill
+ 2368.55kB 22.15% 61.17%  2368.55kB 22.15%  runtime/trace.Start
+ 1060.10kB  9.91% 71.08%  1060.10kB  9.91%  reflect.growslice
+    1026kB  9.59% 80.68%     1026kB  9.59%  runtime.allocm
+ -528.17kB  4.94% 75.74%  -528.17kB  4.94%  regexp.(*bitState).reset
+     514kB  4.81% 80.54%      514kB  4.81%  bufio.NewReaderSize (inline)
+  512.05kB  4.79% 85.33%   512.05kB  4.79%  net/textproto.NewReader
+  512.03kB  4.79% 90.12%   512.03kB  4.79%  syscall.anyToSockaddr
+         0     0% 90.12%      514kB  4.81%  bufio.NewReader
+         0     0% 90.12%  5232.52kB 48.93%  encoding/json.(*Decoder).Decode
