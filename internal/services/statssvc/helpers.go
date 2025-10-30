@@ -2,20 +2,37 @@ package statssvc
 
 import "sort"
 
-func getSum(data []float64) float64 {
-	res := 0.0
+// func getSum(data []float64) float64 {
+// 	res := 0.0
 
-	for _, val := range data {
-		res += val
-	}
+// 	for _, val := range data {
+// 		res += val
+// 	}
 
-	return res
-}
+// 	return res
+// }
 
-func getMinMax(data []float64) (float64, float64) {
+// func getMinMax(data []float64) (float64, float64) {
+// 	min, max := data[0], data[0]
+
+// 	for _, val := range data {
+// 		if val < min {
+// 			min = val
+// 		}
+// 		if val > max {
+// 			max = val
+// 		}
+// 	}
+
+// 	return min, max
+// }
+
+func getSumMinMax(data []float64) (float64, float64, float64) {
+	sum := 0.0
 	min, max := data[0], data[0]
 
 	for _, val := range data {
+		sum += val
 		if val < min {
 			min = val
 		}
@@ -24,7 +41,7 @@ func getMinMax(data []float64) (float64, float64) {
 		}
 	}
 
-	return min, max
+	return sum, min, max
 }
 
 func getMedian(data []float64) float64 {
