@@ -2,11 +2,11 @@ goos: linux
 goarch: amd64
 pkg: github.com/sunr3d/optimization-practice/internal/services/statssvc
 cpu: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
-BenchmarkService_Calculate/10_элементов-8                  	12772924	        82.57 ns/op	      64 B/op	       1 allocs/op
-BenchmarkService_Calculate/100_элементов-8                 	 2185191	       539.5 ns/op	      64 B/op	       1 allocs/op
-BenchmarkService_Calculate/1000_элементов-8                	  201481	      5309 ns/op	      64 B/op	       1 allocs/op
-BenchmarkService_Calculate/10000_элементов-8               	   23575	     43785 ns/op	      64 B/op	       1 allocs/op
-BenchmarkService_Calculate/100000_элементов-8              	    2692	    464028 ns/op	      64 B/op	       1 allocs/op
-BenchmarkService_Calculate/1000000_элементов-8             	     250	   4873925 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/10_элементов-8                  	12854276	        87.17 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/100_элементов-8                 	 2364792	       529.2 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/1000_элементов-8                	  272886	      4371 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/10000_элементов-8               	   27727	     42750 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/100000_элементов-8              	    2792	    438524 ns/op	      64 B/op	       1 allocs/op
+BenchmarkService_Calculate/1000000_элементов-8             	     256	   4935846 ns/op	     115 B/op	       1 allocs/op
 PASS
-ok  	github.com/sunr3d/optimization-practice/internal/services/statssvc	8.439s
+ok  	github.com/sunr3d/optimization-practice/internal/services/statssvc	8.737s

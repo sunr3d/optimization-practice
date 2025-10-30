@@ -1,19 +1,19 @@
 File: main
 Build ID: b4d6309feace74aa0dee499da736d6c4c9f8a7b9
 Type: cpu
-Time: 2025-10-30 18:20:57 MSK
-Duration: 45.12s, Total samples = 237.04s (525.40%)
-Showing nodes accounting for 123.83s, 52.24% of 237.04s total
-Dropped 873 nodes (cum <= 1.19s)
-Showing top 10 nodes out of 142
+Time: 2025-10-30 18:53:27 MSK
+Duration: 20s, Total samples = 59.53s (297.64%)
+Showing nodes accounting for 33.12s, 55.64% of 59.53s total
+Dropped 490 nodes (cum <= 0.30s)
+Showing top 10 nodes out of 119
       flat  flat%   sum%        cum   cum%
-    33.77s 14.25% 14.25%     34.40s 14.51%  strconv.readFloat
-    20.80s  8.77% 23.02%     50.11s 21.14%  encoding/json.(*Decoder).readValue
-    14.98s  6.32% 29.34%     18.17s  7.67%  slices.partitionOrdered[go.shape.float64]
-    13.94s  5.88% 35.22%     17.55s  7.40%  encoding/json.(*decodeState).rescanLiteral
-     8.08s  3.41% 38.63%     14.03s  5.92%  reflect.(*rtype).Name
-     8.03s  3.39% 42.02%     11.25s  4.75%  encoding/json.stateDot0
-     7.78s  3.28% 45.30%      7.78s  3.28%  internal/runtime/syscall.Syscall6
-     5.92s  2.50% 47.80%     94.40s 39.82%  encoding/json.(*decodeState).literalStore
-     5.44s  2.29% 50.09%     32.42s 13.68%  encoding/json.indirect
-     5.09s  2.15% 52.24%      7.64s  3.22%  encoding/json.stateBeginValue
+     8.58s 14.41% 14.41%      8.68s 14.58%  strconv.readFloat
+     5.95s  9.99% 24.41%     12.38s 20.80%  encoding/json.(*Decoder).readValue
+     5.37s  9.02% 33.43%      6.39s 10.73%  slices.partitionOrdered[go.shape.float64]
+     3.90s  6.55% 39.98%      4.78s  8.03%  encoding/json.(*decodeState).rescanLiteral
+     2.11s  3.54% 43.52%      3.54s  5.95%  reflect.(*rtype).Name
+     2.10s  3.53% 47.05%      2.73s  4.59%  encoding/json.stateDot0
+     1.40s  2.35% 49.40%     24.19s 40.63%  encoding/json.(*decodeState).literalStore
+     1.35s  2.27% 51.67%      8.58s 14.41%  encoding/json.indirect
+     1.18s  1.98% 53.65%      1.24s  2.08%  cmp.Less[go.shape.float64] (inline)
+     1.18s  1.98% 55.64%      1.34s  2.25%  slices.insertionSortOrdered[go.shape.float64]

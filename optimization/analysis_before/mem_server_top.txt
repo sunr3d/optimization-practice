@@ -1,18 +1,18 @@
 File: main
 Build ID: b4d6309feace74aa0dee499da736d6c4c9f8a7b9
 Type: inuse_space
-Time: 2025-10-30 18:21:42 MSK
-Duration: 45.01s, Total samples = 25570.95kB 
-Showing nodes accounting for 24546.92kB, 96.00% of 25570.95kB total
-Showing top 10 nodes out of 54
+Time: 2025-10-30 18:53:47 MSK
+Duration: 20.01s, Total samples = 16206.52kB 
+Showing nodes accounting for 15182.49kB, 93.68% of 16206.52kB total
+Showing top 10 nodes out of 45
       flat  flat%   sum%        cum   cum%
-13327.23kB 52.12% 52.12% 13327.23kB 52.12%  encoding/json.(*Decoder).refill
- 7822.11kB 30.59% 82.71%  7822.11kB 30.59%  reflect.growslice
- 1184.27kB  4.63% 87.34%  1184.27kB  4.63%  runtime/pprof.StartCPUProfile
- 1184.27kB  4.63% 91.97%  1184.27kB  4.63%  runtime/trace.Start
-  516.01kB  2.02% 93.99%   516.01kB  2.02%  runtime/pprof.(*profMap).lookup
-     513kB  2.01% 96.00%      513kB  2.01%  runtime.allocm
-  512.03kB  2.00% 98.00%   512.03kB  2.00%  syscall.anyToSockaddr
- -512.01kB  2.00% 96.00%  -512.01kB  2.00%  internal/sync.(*HashTrieMap[go.shape.struct { net/netip.isV6 bool; net/netip.zoneV6 string },go.shape.struct { weak._ [0]*go.shape.struct { net/netip.isV6 bool; net/netip.zoneV6 string }; weak.u unsafe.Pointer }]).All
-         0     0% 96.00% 21149.35kB 82.71%  encoding/json.(*Decoder).Decode
-         0     0% 96.00% 13327.23kB 52.12%  encoding/json.(*Decoder).readValue
+ 6360.59kB 39.25% 39.25%  6360.59kB 39.25%  reflect.growslice
+ 4172.42kB 25.75% 64.99%  4172.42kB 25.75%  encoding/json.(*Decoder).refill
+ 2947.21kB 18.19% 83.18%  2947.21kB 18.19%  runtime/trace.Start
+ 1184.27kB  7.31% 90.49%  1184.27kB  7.31%  runtime/pprof.StartCPUProfile
+  516.01kB  3.18% 93.67%   516.01kB  3.18%  io.init.func1
+     514kB  3.17% 96.84%      514kB  3.17%  bufio.NewWriterSize
+ -512.01kB  3.16% 93.68%  -512.01kB  3.16%  internal/sync.(*HashTrieMap[go.shape.struct { net/netip.isV6 bool; net/netip.zoneV6 string },go.shape.struct { weak._ [0]*go.shape.struct { net/netip.isV6 bool; net/netip.zoneV6 string }; weak.u unsafe.Pointer }]).All
+         0     0% 93.68%   516.01kB  3.18%  bufio.(*Writer).Flush
+         0     0% 93.68% 10533.01kB 64.99%  encoding/json.(*Decoder).Decode
+         0     0% 93.68%  4172.42kB 25.75%  encoding/json.(*Decoder).readValue
