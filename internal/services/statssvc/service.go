@@ -21,12 +21,15 @@ func (s *service) Calculate(ctx context.Context, data []float64) (*models.Stats,
 		return &models.Stats{}, nil
 	}
 
-	sum := getSum(data)
+	// sum := getSum(data)
+	sum, min, max := getSumMinMax(data)
 	mean := sum / float64(len(data))
-	min, max := getMinMax(data)
-	median := getMedian(data)
+
+	// min, max := getMinMax(data)
 	variance := getVariance(data, mean)
 	deviation := math.Sqrt(variance)
+
+	median := getMedian(data)
 
 	return &models.Stats{
 		Count:     len(data),

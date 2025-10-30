@@ -1,0 +1,18 @@
+File: main
+Build ID: ef248b78c7e32ef069f7e0a178ff54754c0aebff
+Type: inuse_space
+Time: 2025-10-30 19:08:14 MSK
+Duration: 20.01s, Total samples = 6648.37kB 
+Showing nodes accounting for 6648.37kB, 100% of 6648.37kB total
+Showing top 10 nodes out of 42
+      flat  flat%   sum%        cum   cum%
+ 2086.21kB 31.38% 31.38%  2086.21kB 31.38%  encoding/json.(*Decoder).refill
+ 1990.92kB 29.95% 61.33%  1990.92kB 29.95%  reflect.growslice
+ 1032.02kB 15.52% 76.85%  1032.02kB 15.52%  runtime/pprof.(*profMap).lookup
+     514kB  7.73% 84.58%      514kB  7.73%  bufio.NewReaderSize (inline)
+     513kB  7.72% 92.30%      513kB  7.72%  runtime.allocm
+  512.22kB  7.70%   100%   512.22kB  7.70%  runtime.malg
+         0     0%   100%      514kB  7.73%  bufio.NewReader
+         0     0%   100%  4077.13kB 61.33%  encoding/json.(*Decoder).Decode
+         0     0%   100%  2086.21kB 31.38%  encoding/json.(*Decoder).readValue
+         0     0%   100%  1990.92kB 29.95%  encoding/json.(*decodeState).array

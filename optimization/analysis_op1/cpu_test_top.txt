@@ -1,0 +1,19 @@
+File: statssvc.test
+Build ID: 602b7120f7c34627ea23e3dbed9056b2db894d2c
+Type: cpu
+Time: 2025-10-30 19:07:42 MSK
+Duration: 8.32s, Total samples = 8320ms (  100%)
+Showing nodes accounting for 7680ms, 92.31% of 8320ms total
+Dropped 54 nodes (cum <= 41.60ms)
+Showing top 10 nodes out of 35
+      flat  flat%   sum%        cum   cum%
+    2240ms 26.92% 26.92%     2240ms 26.92%  github.com/sunr3d/optimization-practice/internal/services/statssvc.getVariance (inline)
+    1770ms 21.27% 48.20%     2350ms 28.25%  slices.partialInsertionSortOrdered[go.shape.float64]
+    1660ms 19.95% 68.15%     1660ms 19.95%  github.com/sunr3d/optimization-practice/internal/services/statssvc.getSumMinMax (inline)
+     760ms  9.13% 77.28%     8210ms 98.68%  github.com/sunr3d/optimization-practice/internal/services/statssvc.(*service).Calculate
+     600ms  7.21% 84.50%      670ms  8.05%  cmp.Less[go.shape.float64] (inline)
+     200ms  2.40% 86.90%      460ms  5.53%  runtime.mallocgcSmallNoscan
+     120ms  1.44% 88.34%      170ms  2.04%  slices.insertionSortOrdered[go.shape.float64]
+     110ms  1.32% 89.66%      110ms  1.32%  math.Sqrt (inline)
+     110ms  1.32% 90.99%      570ms  6.85%  runtime.mallocgc
+     110ms  1.32% 92.31%      110ms  1.32%  runtime.nextFreeFast (inline)

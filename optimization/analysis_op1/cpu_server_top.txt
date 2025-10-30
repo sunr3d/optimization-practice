@@ -1,0 +1,19 @@
+File: main
+Build ID: ef248b78c7e32ef069f7e0a178ff54754c0aebff
+Type: cpu
+Time: 2025-10-30 19:07:54 MSK
+Duration: 20s, Total samples = 60.10s (300.48%)
+Showing nodes accounting for 33.78s, 56.21% of 60.10s total
+Dropped 452 nodes (cum <= 0.30s)
+Showing top 10 nodes out of 121
+      flat  flat%   sum%        cum   cum%
+     9.05s 15.06% 15.06%      9.19s 15.29%  strconv.readFloat
+     5.77s  9.60% 24.66%     12.41s 20.65%  encoding/json.(*Decoder).readValue
+     5.40s  8.99% 33.64%      6.53s 10.87%  slices.partitionOrdered[go.shape.float64]
+     3.63s  6.04% 39.68%      4.55s  7.57%  encoding/json.(*decodeState).rescanLiteral
+     1.93s  3.21% 42.90%      2.72s  4.53%  encoding/json.stateDot0
+     1.87s  3.11% 46.01%      3.63s  6.04%  reflect.(*rtype).Name
+     1.59s  2.65% 48.65%      8.31s 13.83%  encoding/json.indirect
+     1.57s  2.61% 51.26%      2.12s  3.53%  encoding/json.stateBeginValue
+     1.53s  2.55% 53.81%     25.06s 41.70%  encoding/json.(*decodeState).literalStore
+     1.44s  2.40% 56.21%      1.44s  2.40%  runtime.memmove
